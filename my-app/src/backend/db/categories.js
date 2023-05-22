@@ -3,25 +3,37 @@ import { v4 as uuid } from "uuid";
 /**
  * Category Database can be added here.
  * You can add category of your wish with different attributes
- * */
-
-export const categories = [
-  {
+ * {
     _id: uuid(),
     categoryName: "fiction",
     description:
       "literature in the form of prose, especially novels, that describes imaginary events and people",
   },
+ * */
+
+export const categories = [
   {
     _id: uuid(),
-    categoryName: "non-fiction",
+    categoryName: "laptop-pc",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "Range of gaming laptops and gaming PC",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "consoles",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Gaming console set with in-store accessories",
   },
+  {
+    _id: uuid(),
+    categoryName: "CD-games",
+    description:
+      "Gaming CD for both PC and console",
+  },
+  {
+    _id: uuid(),
+    categoryName: "accessories",
+    description:
+      "Gaming accessories all you need",
+  }
 ];
