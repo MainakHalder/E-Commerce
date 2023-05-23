@@ -1,6 +1,6 @@
 import "./App.css";
 import Mockman from "mockman-js";
-import {Routes,Route,Link,NavLink} from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import HomePage from "./pages/home";
 import CartPage from "./pages/cart";
 import CheckoutPage from "./pages/checkout";
@@ -23,16 +23,19 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element = {<HomePage/>} />
-        <Route path="/pages/home" element = {<HomePage/>} />
-        <Route path="/pages/cart" element = {<CartPage/>} />
-        <Route path="/pages/checkout" element = {<CheckoutPage/>} />
-        <Route path="/pages/login" element = {<LoginPage/>} />
-        <Route path="/pages/productListing" element = {<ProductPage/>} />
-        <Route path="/pages/signup" element = {<SignupPage/>} />
-        <Route path="/pages/singleProductListing" element = {<SingleProductPage/>} />
-        <Route path="/pages/wishlist" element = {<WishlistPage/>} />
-        <Route path="/mockman" element={<Mockman/>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/pages/home" element={<HomePage />} />
+        <Route path="/pages/cart" element={<CartPage />} />
+        <Route path="/pages/checkout" element={<CheckoutPage />} />
+        <Route path="/pages/login" element={<LoginPage />} />
+        <Route path="/pages/productListing" element={<ProductPage />} />
+        <Route path="/pages/signup" element={<SignupPage />} />
+        <Route
+          path="/pages/singleProductListing/:id"
+          element={<SingleProductPage />}
+        />
+        <Route path="/pages/wishlist" element={<WishlistPage />} />
+        <Route path="/mockman" element={<Mockman />} />
       </Routes>
     </div>
   );

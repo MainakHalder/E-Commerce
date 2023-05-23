@@ -1,5 +1,6 @@
 import { productContext } from "../contexts/contextProvider";
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ProductPage() {
   const { showProduct, setProduct } = useContext(productContext);
@@ -114,16 +115,31 @@ export default function ProductPage() {
               key={_id}
               style={{
                 border: "1px solid black",
-                width: "260px",
+                width: "35%",
                 margin: "0.5%",
+                display: "flex",
+                flexDirection: "column",
+                alignContent: "center",
               }}
             >
               <p>
-                <img src={image} alt={name} />
+                <img src={image} alt={name} style={{ width: "95%" }} />
               </p>
               <p>{name}</p>
               <p>Price : INR {price}</p>
               <p>Rating :{rating}</p>
+              <button style={{ width: "20%", alignSelf: "center" }}>
+                <Link
+                  style={{ textDecoration: "none", color: "black" }}
+                  to={`/pages/singleProductListing/${_id}`}
+                >
+                  Desc
+                </Link>
+              </button>
+              <div style={{ alignSelf: "center" }}>
+                <button>Add to cart</button>
+                <button>Add to wishList</button>
+              </div>
             </li>
           )
         )}
