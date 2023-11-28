@@ -17,7 +17,7 @@ export default function ProductPage() {
   //       setProduct(resolvedData.products);
   //       setCopyProduct(resolvedData.products);
   //     } catch (error) {
-  //       console.error(error);
+  //       console.error(error); // { consoles: false, }
   //     }
   //   };
   useEffect(() => {
